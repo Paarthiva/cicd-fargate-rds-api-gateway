@@ -11,7 +11,6 @@ Clone the repository.  Make sure you have Java11 and Docker installed.  If you d
 
 Run the following commands
 ````
-mvn clean install
 docker build -t <Your-Image-Name>:<Your-Tag> .
 docker run -p 8080:8080 <Your-Image-Name>:<Your-Tag>
 ````
