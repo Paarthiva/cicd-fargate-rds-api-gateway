@@ -1,7 +1,7 @@
 ARG REGISTRY=docker.io
 
 # Build
-FROM maven:3.8.6-jdk-11-slim AS build
+FROM ${REGISTRY}/maven:3.8.6-jdk-11-slim AS build
 COPY src /home/app/src
 COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package
