@@ -2,8 +2,10 @@ version: '3.9'
 
 services:
   app:
-    image: 'docker-spring-boot-postgres:latest'
+    image: 'backend'
     build: .
+    ports:
+      - "8080:8080"
     container_name: app
     depends_on:
       - db
@@ -18,3 +20,4 @@ services:
     container_name: db
     environment:
       - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres
